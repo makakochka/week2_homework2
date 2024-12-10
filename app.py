@@ -1,30 +1,9 @@
 from db_config import Message
+from show_users import show_users
+from add_user import add_user
 from find_user import find_user
 from delete_user import delete_user
 from edit_user import edit_user
-from name_criterion import name_criterion
-from age_criterion import age_criterion
-
-
-def show_users():
-    for msg in Message.select():
-        print(f"{msg.user}, {msg.age}")
-
-
-def add_user(find_users):
-    new_user_name = name_criterion(input("New user name > "))
-    if new_user_name in find_users:
-        print(f"Duplicated user name {new_user_name}")
-    else:
-        try:
-            new_age_input = input("New user age > ")
-            new_age = int(new_age_input)  # Convert the input to an integer
-            new_age = age_criterion(new_age)
-            if new_age is not None:
-                Message.create(user=new_user_name, age=new_age, content="None")
-                find_users.append(new_user_name)
-        except ValueError:
-            print("Please enter a valid number for the age.")
 
 
 def main():

@@ -17,10 +17,7 @@ def edit_user(find_users):
                     if new_age is not None:
                         msg.age = new_age
                         msg.save()
-                        print(
-                            f"{entered_name} whose age was {msg.age} has been updated to "
-                            f"{new_user_name} whose age is {new_age}"
-                        )
+                        print(f"Update user: {new_user_name}")
                 except ValueError:
                     print("Please enter a valid number for the age.")
                 break
