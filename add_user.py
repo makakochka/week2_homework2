@@ -13,7 +13,7 @@ def add_user(find_users):
     else:
         try:
             new_age_input = input("New user age > ")
-            new_age = int(new_age_input)
+            new_age = float(new_age_input)
             new_age = age_criterion(new_age)
             if new_age is not None:
                 Message.create(user=new_user_name, age=new_age, content="None")

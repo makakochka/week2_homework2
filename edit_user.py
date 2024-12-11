@@ -12,7 +12,7 @@ def edit_user(find_users):
                     new_user_name = input("New user name > ")
                     msg.user = new_user_name
                     new_age_input = input(f"New user age({msg.age}) > ")
-                    new_age = int(new_age_input)  # Convert the input to an integer
+                    new_age = float(new_age_input)  # Convert the input to an integer
                     new_age = age_criterion(new_age)
                     if new_age is not None:
                         msg.age = new_age
