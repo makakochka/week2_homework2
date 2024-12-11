@@ -8,6 +8,7 @@ def add_user(find_users):
     if new_user_name is None:  # Check if name validation failed!! ;-)
         return
     if new_user_name in find_users:
+        new_age_input = input("New user age > ")
         print(f"Duplicated user name {new_user_name}")
     else:
         try:
