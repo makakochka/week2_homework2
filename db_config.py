@@ -9,10 +9,10 @@ from playhouse.db_url import connect
 # .envの読み込み
 load_dotenv(override=True)
 
-# 実行したSQLをログで出力する設定
-logger = logging.getLogger("peewee")
-logger.addHandler(logging.StreamHandler())
-logger.setLevel(logging.DEBUG)
+# # 実行したSQLをログで出力する設定
+# logger = logging.getLogger("peewee")
+# logger.addHandler(logging.StreamHandler())
+# logger.setLevel(logging.DEBUG)
 
 # データベースへの接続設定
 # db = SqliteDatabase("peewee_db.db")
